@@ -5,11 +5,126 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+:root {
+  /* Olivine - Green Palette */
+  --olivine-light: oklch(97.846% 0.00722 132.999);
+  --olivine-light-hover: oklch(96.621% 0.00845 129.015);
+  --olivine-light-active: oklch(93.016% 0.02042 131.653);
+  --olivine-normal: oklch(77.324% 0.06827 132.348);
+  --olivine-normal-hover: oklch(71.576% 0.06307 131.755);
+  --olivine-normal-active: oklch(65.658% 0.05702 132.529);
+  --olivine-dark: oklch(62.57% 0.0528 132.241);
+  --olivine-dark-hover: oklch(53.445% 0.04518 132.831);
+  --olivine-dark-active: oklch(43.655% 0.03532 133.058);
+  --olivine-darker: oklch(36.953% 0.02912 131.719);
+
+  /* Moonstone - Blue/Teal Palette */
+  --moonstone-light: oklch(96.694% 0.00605 224.231);
+  --moonstone-light-hover: oklch(94.997% 0.00953 222.554);
+  --moonstone-light-active: oklch(89.648% 0.01912 222.415);
+  --moonstone-normal: oklch(66.282% 0.06129 221.777);
+  --moonstone-normal-hover: oklch(61.333% 0.05618 223.212);
+  --moonstone-normal-active: oklch(56.425% 0.05124 220.916);
+  --moonstone-dark: oklch(53.879% 0.04892 222.536);
+  --moonstone-dark-hover: oklch(46.115% 0.0407 219.495);
+  --moonstone-dark-active: oklch(37.852% 0.03159 221.652);
+  --moonstone-darker: oklch(32.309% 0.02667 219.579);
+
+  /* Payney's Grey - Slate/Steel Palette */
+  --payneys-grey-light: oklch(95.221% 0.0068 234.204);
+  --payneys-grey-light-hover: oklch(92.987% 0.00937 232.781);
+  --payneys-grey-light-active: oklch(85.171% 0.01983 230.928);
+  --payneys-grey-normal: oklch(50.73% 0.06639 232.391);
+  --payneys-grey-normal-hover: oklch(47.079% 0.06141 232.978);
+  --payneys-grey-normal-active: oklch(43.307% 0.0553 232.388);
+  --payneys-grey-dark: oklch(41.569% 0.05304 232.418);
+  --payneys-grey-dark-hover: oklch(35.871% 0.04434 231.591);
+  --payneys-grey-dark-active: oklch(29.998% 0.03435 231.251);
+  --payneys-grey-darker: oklch(25.802% 0.02834 232.546);
+
+  /* Pearl - Beige/Warm Palette */
+  --pearl-light: oklch(99.204% 0.0033 67.015);
+  --pearl-light-hover: oklch(98.878% 0.0044 77.98);
+  --pearl-light-active: oklch(97.729% 0.0101 81.7);
+  --pearl-normal: oklch(92.537% 0.03306 83.693);
+  --pearl-normal-hover: oklch(85.469% 0.03081 83.609);
+  --pearl-normal-active: oklch(78.277% 0.02728 82.346);
+  --pearl-dark: oklch(74.722% 0.02585 83.386);
+  --pearl-dark-hover: oklch(63.33% 0.0212 80.035);
+  --pearl-dark-active: oklch(51.53% 0.01655 84.576);
+  --pearl-darker: oklch(43.254% 0.01384 84.576);
+
+  /* Caput Mortuum - Deep Red/Earth Palette */
+  --caput-mortuum-light: oklch(93.987% 0.00448 33.169);
+  --caput-mortuum-light-hover: oklch(90.916% 0.00762 16.552);
+  --caput-mortuum-light-active: oklch(80.681% 0.01587 17.17);
+  --caput-mortuum-normal: oklch(33.798% 0.06706 22.548);
+  --caput-mortuum-normal-hover: oklch(31.67% 0.06212 22.621);
+  --caput-mortuum-normal-active: oklch(29.343% 0.05562 22.663);
+  --caput-mortuum-dark: oklch(28.245% 0.05304 22.719);
+  --caput-mortuum-dark-hover: oklch(24.72% 0.04356 22.909);
+  --caput-mortuum-dark-active: oklch(21.108% 0.03343 20.216);
+  --caput-mortuum-darker: oklch(18.716% 0.02752 19.951);
+}
+
+@theme inline {
+  --color-olivine-light: var(--olivine-light);
+  --color-olivine-light-hover: var(--olivine-light-hover);
+  --color-olivine-light-active: var(--olivine-light-active);
+  --color-olivine-normal: var(--olivine-normal);
+  --color-olivine-normal-hover: var(--olivine-normal-hover);
+  --color-olivine-normal-active: var(--olivine-normal-active);
+  --color-olivine-dark: var(--olivine-dark);
+  --color-olivine-dark-hover: var(--olivine-dark-hover);
+  --color-olivine-dark-active: var(--olivine-dark-active);
+  --color-olivine-darker: var(--olivine-darker);
+
+  --color-moonstone-light: var(--moonstone-light);
+  --color-moonstone-light-hover: var(--moonstone-light-hover);
+  --color-moonstone-light-active: var(--moonstone-light-active);
+  --color-moonstone-normal: var(--moonstone-normal);
+  --color-moonstone-normal-hover: var(--moonstone-normal-hover);
+  --color-moonstone-normal-active: var(--moonstone-normal-active);
+  --color-moonstone-dark: var(--moonstone-dark);
+  --color-moonstone-dark-hover: var(--moonstone-dark-hover);
+  --color-moonstone-dark-active: var(--moonstone-dark-active);
+  --color-moonstone-darker: var(--moonstone-darker);
+
+  --color-payneys-grey-light: var(--payneys-grey-light);
+  --color-payneys-grey-light-hover: var(--payneys-grey-light-hover);
+  --color-payneys-grey-light-active: var(--payneys-grey-light-active);
+  --color-payneys-grey-normal: var(--payneys-grey-normal);
+  --color-payneys-grey-normal-hover: var(--payneys-grey-normal-hover);
+  --color-payneys-grey-normal-active: var(--payneys-grey-normal-active);
+  --color-payneys-grey-dark: var(--payneys-grey-dark);
+  --color-payneys-grey-dark-hover: var(--payneys-grey-dark-hover);
+  --color-payneys-grey-dark-active: var(--payneys-grey-dark-active);
+  --color-payneys-grey-darker: var(--payneys-grey-darker);
+
+  --color-pearl-light: var(--pearl-light);
+  --color-pearl-light-hover: var(--pearl-light-hover);
+  --color-pearl-light-active: var(--pearl-light-active);
+  --color-pearl-normal: var(--pearl-normal);
+  --color-pearl-normal-hover: var(--pearl-normal-hover);
+  --color-pearl-normal-active: var(--pearl-normal-active);
+  --color-pearl-dark: var(--pearl-dark);
+  --color-pearl-dark-hover: var(--pearl-dark-hover);
+  --color-pearl-dark-active: var(--pearl-dark-active);
+  --color-pearl-darker: var(--pearl-darker);
+
+  --color-caput-mortuum-light: var(--caput-mortuum-light);
+  --color-caput-mortuum-light-hover: var(--caput-mortuum-light-hover);
+  --color-caput-mortuum-light-active: var(--caput-mortuum-light-active);
+  --color-caput-mortuum-normal: var(--caput-mortuum-normal);
+  --color-caput-mortuum-normal-hover: var(--caput-mortuum-normal-hover);
+  --color-caput-mortuum-normal-active: var(--caput-mortuum-normal-active);
+  --color-caput-mortuum-dark: var(--caput-mortuum-dark);
+  --color-caput-mortuum-dark-hover: var(--caput-mortuum-dark-hover);
+  --color-caput-mortuum-dark-active: var(--caput-mortuum-dark-active);
+  --color-caput-mortuum-darker: var(--caput-mortuum-darker);
+}
+
 html,
 body {
   @apply bg-white dark:bg-gray-950;
-
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
 }
