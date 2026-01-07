@@ -622,6 +622,19 @@ export default function DesignSystemPage() {
                 Semantic Colors & Utilities
               </p>
 
+              {/* Main Theme */}
+              <div className="mb-6">
+                <h4 className="mb-3 text-sm font-semibold text-gray-600">
+                  Main Theme
+                </h4>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-main-theme" />
+                    <p className="text-xs text-gray-600">main-theme</p>
+                  </div>
+                </div>
+              </div>
+
               {/* Font Colors */}
               <div className="mb-6">
                 <h4 className="mb-3 text-sm font-semibold text-gray-600">

@@ -154,13 +154,17 @@
 
   /* Miscellaneous */
   --font-light: var(--pearl-light-active);
-  --font-medium: var(--pearl-caput-mortuum-light-active);
+  --font-medium: var(--caput-mortuum-light-active);
   --font-dark: var(--caput-mortuum-dark-active);
   --font-dark-green: var(--olivine-dark-active);
 
   --background-light: var(--pearl-light-active);
   --background-olivine-light: var(--olivine-light-active);
-  --background-olivine-light-ghost: var(--olivine-light-active / 0.2);
+  --background-olivine-light-ghost: color-mix(
+    in oklch,
+    var(--olivine-light-active),
+    transparent 80%
+  );
   --background-dark: var(--moonstone-dark-hover);
 
   --stroke-light: var(--caput-mortuum-light-hover);
@@ -176,7 +180,7 @@
     180deg,
     var(--payneys-grey-normal) 0%,
     var(--moonstone-normal) 50%,
-    var(--pearl-normal) 100%
+    oklch(76.415% 0.05259 225.565) 100%
   );
 
   --image-primary-normal: linear-gradient(
