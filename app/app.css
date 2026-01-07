@@ -1,8 +1,84 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Xilosa";
+  src: url("/xilosa.ttf") format("truetype");
+}
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-xilosa: "Xilosa", sans-serif;
+  --font-manrope: "Manrope", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+
+  --text-h1: 3.75rem;
+  --text-h1--line-height: 3.75rem;
+  --text-h1--font-weight: 500;
+  --text-h1--vertical-align: top;
+  --text-h2: 3rem;
+  --text-h2--line-height: 3.75rem;
+  --text-h2--font-weight: 500;
+  --text-h3: 2.25rem;
+  --text-h3--line-height: 2.5rem;
+  --text-h3--font-weight: 500;
+  --text-h4: 1.875rem;
+  --text-h4--line-height: 2.25rem;
+  --text-h4--font-weight: 500;
+  --text-h5: 1.5rem;
+  --text-h5--line-height: 2rem;
+  --text-h5--font-weight: 500;
+  --text-h6: 1.25rem;
+  --text-h6--line-height: 1.75rem;
+  --text-h6--font-weight: 500;
+
+  --text-s1: 3.75rem;
+  --text-s1--line-height: 3.75rem;
+  --text-s1--font-weight: 600;
+  --text-s2: 3rem;
+  --text-s2--line-height: 3rem;
+  --text-s2--font-weight: 600;
+  --text-s3: 2.25rem;
+  --text-s3--line-height: 2.5rem;
+  --text-s3--font-weight: 600;
+  --text-s4: 1.875rem;
+  --text-s4--line-height: 2.25rem;
+  --text-s4--font-weight: 600;
+  --text-s5: 1.5rem;
+  --text-s5--line-height: 2rem;
+  --text-s5--font-weight: 600;
+  --text-s6: 1.25rem;
+  --text-s6--line-height: 1.75rem;
+  --text-s6--font-weight: 600;
+  --text-s7: 1rem;
+  --text-s7--line-height: 1.75rem;
+  --text-s7--font-weight: 600;
+  --text-s8: 0.875rem;
+  --text-s8--line-height: normal;
+  --text-s8--font-weight: 600;
+
+  --text-p1: 3.75rem;
+  --text-p1--line-height: 3.75rem;
+  --text-p1--font-weight: 400;
+  --text-p2: 3rem;
+  --text-p2--line-height: 3rem;
+  --text-p2--font-weight: 400;
+  --text-p3: 2.25rem;
+  --text-p3--line-height: 2.5rem;
+  --text-p3--font-weight: 400;
+  --text-p4: 1.875rem;
+  --text-p4--line-height: 2.25rem;
+  --text-p4--font-weight: 400;
+  --text-p5: 1.5rem;
+  --text-p5--line-height: 2rem;
+  --text-p5--font-weight: 400;
+  --text-p6: 1.25rem;
+  --text-p6--line-height: 1.75rem;
+  --text-p6--font-weight: 400;
+  --text-p7: 1rem;
+  --text-p7--line-height: 1.5rem;
+  --text-p7--font-weight: 400;
+  --text-p8: 0.875rem;
+  --text-p8--line-height: 1.25rem;
+  --text-p8--font-weight: 400;
 }
 
 :root {
