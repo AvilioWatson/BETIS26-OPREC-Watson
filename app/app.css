@@ -79,6 +79,16 @@
   --text-p8: 0.875rem;
   --text-p8--line-height: 1.25rem;
   --text-p8--font-weight: 400;
+
+  --background-image-stroke-dark: var(--image-stroke-dark);
+  --background-image-main-theme: var(--image-main-theme);
+  --background-image-primary-normal: var(--image-primary-normal);
+  --background-image-primary-hover: var(--image-primary-hover);
+  --background-image-primary-active: var(--image-primary-active);
+  --background-image-secondary-normal: var(--image-secondary-normal);
+  --background-image-secondary-hover: var(--image-secondary-hover);
+  --background-image-secondary-active: var(--image-secondary-active);
+  --background-image-tertiary-disabled: var(--image-tertiary-disabled);
 }
 
 :root {
@@ -141,6 +151,76 @@
   --caput-mortuum-dark-hover: oklch(24.72% 0.04356 22.909);
   --caput-mortuum-dark-active: oklch(21.108% 0.03343 20.216);
   --caput-mortuum-darker: oklch(18.716% 0.02752 19.951);
+
+  /* Miscellaneous */
+  --font-light: var(--pearl-light-active);
+  --font-medium: var(--pearl-caput-mortuum-light-active);
+  --font-dark: var(--caput-mortuum-dark-active);
+  --font-dark-green: var(--olivine-dark-active);
+
+  --background-light: var(--pearl-light-active);
+  --background-olivine-light: var(--olivine-light-active);
+  --background-olivine-light-ghost: var(--olivine-light-active / 0.2);
+  --background-dark: var(--moonstone-dark-hover);
+
+  --stroke-light: var(--caput-mortuum-light-hover);
+  --stroke-medium-light: var(--payneys-grey-light-active);
+  --stroke-medium: oklch(76.957% 0.04664 231.945);
+  --image-stroke-dark: linear-gradient(
+    180deg,
+    var(--caput-mortuum-dark) 0%,
+    var(--caput-mortuum-normal) 100%
+  );
+
+  --image-main-theme: linear-gradient(
+    180deg,
+    var(--payneys-grey-normal) 0%,
+    var(--moonstone-normal) 50%,
+    var(--pearl-normal) 100%
+  );
+
+  --image-primary-normal: linear-gradient(
+    180deg,
+    var(--payneys-grey-dark) 0%,
+    var(--payneys-grey-normal) 100%
+  );
+  --image-primary-hover: linear-gradient(
+    180deg,
+    var(--payneys-grey-normal) 0%,
+    oklch(76.328% 0.05501 225.841) 100%
+  );
+  --image-primary-active: linear-gradient(
+    180deg,
+    var(--payneys-grey-dark-active) 0%,
+    var(--payneys-grey-normal-active) 100%
+  );
+  --primary-disabled: var(--payneys-grey-normal);
+
+  --image-secondary-normal: linear-gradient(
+    180deg,
+    var(--olivine-normal-hover) 0%,
+    var(--olivine-dark) 100%
+  );
+  --image-secondary-hover: linear-gradient(
+    180deg,
+    var(--olivine-normal) 0%,
+    var(--olivine-dark) 100%
+  );
+  --image-secondary-active: linear-gradient(
+    180deg,
+    var(--olivine-dark) 0%,
+    var(--olivine-dark-hover) 100%
+  );
+  --secondary-disabled: var(--olivine-darker);
+
+  --tertiary-normal: var(--payneys-grey-dark);
+  --tertiary-hover: var(--moonstone-dark-active);
+  --tertiary-active: var(--payneys-grey-dark-active);
+  --image-tertiary-disabled: linear-gradient(
+    180deg,
+    color-mix(in oklch, var(--pearl-normal), transparent 40%) 0%,
+    color-mix(in oklch, var(--caput-mortuum-light), transparent 40%) 100%
+  );
 }
 
 @theme inline {
@@ -198,9 +278,29 @@
   --color-caput-mortuum-dark-hover: var(--caput-mortuum-dark-hover);
   --color-caput-mortuum-dark-active: var(--caput-mortuum-dark-active);
   --color-caput-mortuum-darker: var(--caput-mortuum-darker);
+
+  --color-font-light: var(--font-light);
+  --color-font-medium: var(--font-medium);
+  --color-font-dark: var(--font-dark);
+  --color-font-dark-green: var(--font-dark-green);
+
+  --color-background-light: var(--background-light);
+  --color-background-olivine-light: var(--background-olivine-light);
+  --color-background-olivine-light-ghost: var(--background-olivine-light-ghost);
+  --color-background-dark: var(--background-dark);
+
+  --color-stroke-light: var(--stroke-light);
+  --color-stroke-medium-light: var(--stroke-medium-light);
+  --color-stroke-medium: var(--stroke-medium);
+
+  --color-primary-disabled: var(--primary-disabled);
+  --color-secondary-disabled: var(--secondary-disabled);
+  --color-tertiary-normal: var(--tertiary-normal);
+  --color-tertiary-hover: var(--tertiary-hover);
+  --color-tertiary-active: var(--tertiary-active);
 }
 
 html,
 body {
-  @apply bg-white font-poppins;
+  @apply bg-background-light font-poppins;
 }

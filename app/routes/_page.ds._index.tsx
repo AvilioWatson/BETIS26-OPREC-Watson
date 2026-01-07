@@ -1,6 +1,6 @@
 export default function DesignSystemPage() {
   return (
-    <main className="min-h-screen bg-white p-8 bg-linear-0">
+    <main className="min-h-screen p-8 bg-linear-0">
       <div className="mx-auto max-w-7xl">
         <h1 className="mb-8 text-4xl font-bold text-gray-900">
           Design System Guidelines
@@ -16,13 +16,13 @@ export default function DesignSystemPage() {
               Font Families
             </h3>
             <div className="grid gap-4 md:grid-cols-3">
-              <div className="rounded-lg border border-gray-200 p-6">
+              <div className="rounded-lg border border-gray-200 bg-white p-6">
                 <p className="mb-2 text-sm font-medium text-gray-500">Xilosa</p>
                 <p className="font-xilosa text-2xl">
                   The quick brown fox jumps over the lazy dog
                 </p>
               </div>
-              <div className="rounded-lg border border-gray-200 p-6">
+              <div className="rounded-lg border border-gray-200 bg-white p-6">
                 <p className="mb-2 text-sm font-medium text-gray-500">
                   Manrope
                 </p>
@@ -30,7 +30,7 @@ export default function DesignSystemPage() {
                   The quick brown fox jumps over the lazy dog
                 </p>
               </div>
-              <div className="rounded-lg border border-gray-200 p-6">
+              <div className="rounded-lg border border-gray-200 bg-white p-6">
                 <p className="mb-2 text-sm font-medium text-gray-500">
                   Poppins
                 </p>
@@ -47,7 +47,7 @@ export default function DesignSystemPage() {
               Headings
             </h3>
             <div className="space-y-4">
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">H1</span>
                 </div>
@@ -60,7 +60,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 500</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">H2</span>
                 </div>
@@ -73,7 +73,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 500</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">H3</span>
                 </div>
@@ -86,7 +86,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 500</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">H4</span>
                 </div>
@@ -99,7 +99,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 500</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">H5</span>
                 </div>
@@ -112,7 +112,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 500</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">H6</span>
                 </div>
@@ -134,7 +134,7 @@ export default function DesignSystemPage() {
               Subtitles
             </h3>
             <div className="space-y-4">
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S1</span>
                 </div>
@@ -147,7 +147,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 600</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S2</span>
                 </div>
@@ -160,7 +160,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 600</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S3</span>
                 </div>
@@ -173,7 +173,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 600</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S4</span>
                 </div>
@@ -186,7 +186,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 600</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S5</span>
                 </div>
@@ -199,7 +199,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 600</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S6</span>
                 </div>
@@ -212,7 +212,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 600</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S7</span>
                 </div>
@@ -225,7 +225,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 600</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">S8</span>
                 </div>
@@ -247,7 +247,7 @@ export default function DesignSystemPage() {
               Paragraphs
             </h3>
             <div className="space-y-4">
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P1</span>
                 </div>
@@ -260,7 +260,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 400</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P2</span>
                 </div>
@@ -273,7 +273,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 400</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P3</span>
                 </div>
@@ -286,7 +286,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 400</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P4</span>
                 </div>
@@ -299,7 +299,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 400</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P5</span>
                 </div>
@@ -312,7 +312,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 400</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P6</span>
                 </div>
@@ -325,7 +325,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 400</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P7</span>
                 </div>
@@ -338,7 +338,7 @@ export default function DesignSystemPage() {
                   <div>Weight: 400</div>
                 </div>
               </div>
-              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 p-4">
+              <div className="flex items-baseline gap-4 rounded-lg border border-gray-200 bg-white p-4">
                 <div className="w-20 shrink-0">
                   <span className="text-sm font-medium text-gray-500">P8</span>
                 </div>
@@ -362,7 +362,7 @@ export default function DesignSystemPage() {
           </h2>
           <div className="space-y-8">
             {/* Olivine */}
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
               <h3 className="mb-2 text-xl font-semibold text-gray-700">
                 Olivine
               </h3>
@@ -412,7 +412,7 @@ export default function DesignSystemPage() {
             </div>
 
             {/* Moonstone */}
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
               <h3 className="mb-2 text-xl font-semibold text-gray-700">
                 Moonstone
               </h3>
@@ -462,7 +462,7 @@ export default function DesignSystemPage() {
             </div>
 
             {/* Payneys Grey */}
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
               <h3 className="mb-2 text-xl font-semibold text-gray-700">
                 Payneys Grey
               </h3>
@@ -512,7 +512,7 @@ export default function DesignSystemPage() {
             </div>
 
             {/* Pearl */}
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
               <h3 className="mb-2 text-xl font-semibold text-gray-700">
                 Pearl
               </h3>
@@ -562,7 +562,7 @@ export default function DesignSystemPage() {
             </div>
 
             {/* Caput Mortuum */}
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
               <h3 className="mb-2 text-xl font-semibold text-gray-700">
                 Caput Mortuum
               </h3>
@@ -609,6 +609,168 @@ export default function DesignSystemPage() {
                 <div className="space-y-2">
                   <div className="h-24 rounded-lg border border-gray-300 bg-caput-mortuum-darker" />
                   <p className="text-xs text-gray-600">darker</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Miscellaneous */}
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <h3 className="mb-2 text-xl font-semibold text-gray-700">
+                Miscellaneous
+              </h3>
+              <p className="mb-4 text-sm text-gray-500">
+                Semantic Colors & Utilities
+              </p>
+
+              {/* Font Colors */}
+              <div className="mb-6">
+                <h4 className="mb-3 text-sm font-semibold text-gray-600">
+                  Font Colors
+                </h4>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-font-light" />
+                    <p className="text-xs text-gray-600">font-light</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-font-medium" />
+                    <p className="text-xs text-gray-600">font-medium</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-font-dark" />
+                    <p className="text-xs text-gray-600">font-dark</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-font-dark-green" />
+                    <p className="text-xs text-gray-600">font-dark-green</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Background Colors */}
+              <div className="mb-6">
+                <h4 className="mb-3 text-sm font-semibold text-gray-600">
+                  Background Colors
+                </h4>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-background-light" />
+                    <p className="text-xs text-gray-600">background-light</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-background-olivine-light" />
+                    <p className="text-xs text-gray-600">
+                      background-olivine-light
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-background-olivine-light-ghost" />
+                    <p className="text-xs text-gray-600">
+                      background-olivine-light-ghost
+                    </p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-background-dark" />
+                    <p className="text-xs text-gray-600">background-dark</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Stroke Colors */}
+              <div className="mb-6">
+                <h4 className="mb-3 text-sm font-semibold text-gray-600">
+                  Stroke Colors
+                </h4>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-stroke-light" />
+                    <p className="text-xs text-gray-600">stroke-light</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-stroke-medium-light" />
+                    <p className="text-xs text-gray-600">stroke-medium-light</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-stroke-medium" />
+                    <p className="text-xs text-gray-600">stroke-medium</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-stroke-dark" />
+                    <p className="text-xs text-gray-600">stroke-dark</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Interactions */}
+              <div className="mb-6">
+                <h4 className="mb-3 text-sm font-semibold text-gray-600">
+                  Interactions<span className="font-medium"> / Primary</span>
+                </h4>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-primary-normal" />
+                    <p className="text-xs text-gray-600">primary-normal</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-primary-hover" />
+                    <p className="text-xs text-gray-600">primary-hover</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-primary-active" />
+                    <p className="text-xs text-gray-600">primary-active</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-primary-disabled" />
+                    <p className="text-xs text-gray-600">primary-disabled</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="mb-3 text-sm font-semibold text-gray-600">
+                  Interactions<span className="font-medium"> / Secondary</span>
+                </h4>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-secondary-normal" />
+                    <p className="text-xs text-gray-600">secondary-normal</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-secondary-hover" />
+                    <p className="text-xs text-gray-600">secondary-hover</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-secondary-active" />
+                    <p className="text-xs text-gray-600">secondary-active</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-secondary-disabled" />
+                    <p className="text-xs text-gray-600">secondary-disabled</p>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h4 className="mb-3 text-sm font-semibold text-gray-600">
+                  Interactions<span className="font-medium"> / Tertiary</span>
+                </h4>
+                <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-tertiary-normal" />
+                    <p className="text-xs text-gray-600">tertiary-normal</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-tertiary-hover" />
+                    <p className="text-xs text-gray-600">tertiary-hover</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-tertiary-active" />
+                    <p className="text-xs text-gray-600">tertiary-ctive</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-24 rounded-lg border border-gray-300 bg-tertiary-disabled" />
+                    <p className="text-xs text-gray-600">tertiary-disabled</p>
+                  </div>
                 </div>
               </div>
             </div>
