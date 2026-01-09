@@ -1,3 +1,8 @@
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "~/components/ui/tooltip";
 import { Home, Star } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { Chip } from "~/components/ui/chip";
@@ -58,6 +63,17 @@ export function LandingPageModule() {
             Button
             <Star />
           </Button>
+        </div>
+      </div>
+      <div>
+        Tooltip
+        <div className="flex flex-col">
+          <Tooltip>
+            <TooltipTrigger>Hover</TooltipTrigger>
+            <TooltipContent>
+              <p>Add to library</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
       </div>
     </main>
