@@ -152,6 +152,13 @@
   --caput-mortuum-dark-active: oklch(21.108% 0.03343 20.216);
   --caput-mortuum-darker: oklch(18.716% 0.02752 19.951);
 
+  /* Feedback */
+  --feedback-success: oklch(60.129% 0.08861 209.075);
+  --feedback-error: oklch(51.263% 0.19711 24.715);
+  --feedback-warning: oklch(82.175% 0.15828 91.655);
+  --feedback-information: oklch(55.725% 0.23149 274.829);
+  --feedback-loading: oklch(40.26% 0.0636 253.455);
+
   /* Miscellaneous */
   --font-light: var(--pearl-light-active);
   --font-medium: var(--caput-mortuum-light-active);
@@ -282,6 +289,12 @@
   --color-caput-mortuum-dark-hover: var(--caput-mortuum-dark-hover);
   --color-caput-mortuum-dark-active: var(--caput-mortuum-dark-active);
   --color-caput-mortuum-darker: var(--caput-mortuum-darker);
+
+  --color-feedback-success: var(--feedback-success);
+  --color-feedback-error: var(--feedback-error);
+  --color-feedback-warning: var(--feedback-warning);
+  --color-feedback-information: var(--feedback-information);
+  --color-feedback-loading: var(--feedback-loading);
 
   --color-font-light: var(--font-light);
   --color-font-medium: var(--font-medium);
