@@ -3,16 +3,10 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "~/components/ui/tooltip";
-import {
-  AlertCircleIcon,
-  CheckCircle2Icon,
-  Home,
-  PopcornIcon,
-  Star,
-} from "lucide-react";
+import { Home, Star } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { Chip } from "~/components/ui/chip";
-import { Alert, AlertDescription, AlertTitle } from "~/components/ui/alert";
+import { Alert } from "~/components/ui/alert";
 
 export function LandingPageModule() {
   return (
@@ -86,31 +80,13 @@ export function LandingPageModule() {
       <div>
         Alert
         <div className="flex flex-col">
-          <Alert>
-            <CheckCircle2Icon />
-            <AlertTitle>Success! Your changes have been saved</AlertTitle>
-            <AlertDescription>
-              This is an alert with icon, title and description.
-            </AlertDescription>
+          <Alert variant="success">A simple success alert-check it out!</Alert>
+          <Alert variant="error">A simple error alert-check it out!</Alert>
+          <Alert variant="warning">A simple warning alert-check it out!</Alert>
+          <Alert variant="information">
+            A simple information alert-check it out!
           </Alert>
-          <Alert>
-            <PopcornIcon />
-            <AlertTitle>
-              This Alert has a title and an icon. No description.
-            </AlertTitle>
-          </Alert>
-          <Alert variant="destructive">
-            <AlertCircleIcon />
-            <AlertTitle>Unable to process your payment.</AlertTitle>
-            <AlertDescription>
-              <p>Please verify your billing information and try again.</p>
-              <ul className="list-inside list-disc text-sm">
-                <li>Check your card details</li>
-                <li>Ensure sufficient funds</li>
-                <li>Verify billing address</li>
-              </ul>
-            </AlertDescription>
-          </Alert>
+          <Alert variant="loading">A simple loading alert-check it out!</Alert>
         </div>
       </div>
     </main>

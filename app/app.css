@@ -154,10 +154,15 @@
 
   /* Feedback */
   --feedback-success: oklch(60.129% 0.08861 209.075);
+  --feedback-background-success: oklch(95.995% 0.01075 204.661);
   --feedback-error: oklch(51.263% 0.19711 24.715);
+  --feedback-background-error: oklch(94.48% 0.01855 13.06);
   --feedback-warning: oklch(82.175% 0.15828 91.655);
+  --feedback-background-warning: oklch(98.117% 0.02005 94.545);
   --feedback-information: oklch(55.725% 0.23149 274.829);
+  --feedback-background-information: oklch(95.457% 0.0215 288.78);
   --feedback-loading: oklch(40.26% 0.0636 253.455);
+  --feedback-background-loading: oklch(94.467% 0.00527 248.347);
 
   /* Miscellaneous */
   --font-light: var(--pearl-light-active);
@@ -291,10 +296,17 @@
   --color-caput-mortuum-darker: var(--caput-mortuum-darker);
 
   --color-feedback-success: var(--feedback-success);
+  --color-feedback-background-success: var(--feedback-background-success);
   --color-feedback-error: var(--feedback-error);
+  --color-feedback-background-error: var(--feedback-background-error);
   --color-feedback-warning: var(--feedback-warning);
+  --color-feedback-background-warning: var(--feedback-background-warning);
   --color-feedback-information: var(--feedback-information);
+  --color-feedback-background-information: var(
+    --feedback-background-information
+  );
   --color-feedback-loading: var(--feedback-loading);
+  --color-feedback-background-loading: var(--feedback-background-loading);
 
   --color-font-light: var(--font-light);
   --color-font-medium: var(--font-medium);
@@ -310,11 +322,11 @@
   --color-stroke-medium-light: var(--stroke-medium-light);
   --color-stroke-medium: var(--stroke-medium);
 
-  --color-primary-disabled: var(--primary-disabled);
-  --color-secondary-disabled: var(--secondary-disabled);
-  --color-tertiary-normal: var(--tertiary-normal);
-  --color-tertiary-hover: var(--tertiary-hover);
-  --color-tertiary-active: var(--tertiary-active);
+  --color-primary-disabled: var(--payneys-grey-normal);
+  --color-secondary-disabled: var(--olivine-darker);
+  --color-tertiary-normal: var(--payneys-grey-dark);
+  --color-tertiary-hover: var(--moonstone-dark-active);
+  --color-tertiary-active: var(--payneys-grey-dark-active);
 }
 
 html,

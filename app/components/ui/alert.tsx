@@ -1,66 +1,115 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "~/lib/utils"
+import { cn } from "~/lib/utils";
+import {
+  AlertCircleIcon,
+  CheckIcon,
+  InfoIcon,
+  Loader2Icon,
+  XIcon,
+} from "lucide-react";
 
 const alertVariants = cva(
-  "relative w-full rounded-lg border px-4 py-3 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+  "h-16 md:h-24 flex flex-1 px-5 md:px-7 text-sm gap-5 items-center",
   {
     variants: {
       variant: {
-        default: "bg-card text-card-foreground",
-        destructive:
-          "text-destructive bg-card [&>svg]:text-current *:data-[slot=alert-description]:text-destructive/90",
+        success: "bg-feedback-background-success",
+        error: "bg-feedback-background-error",
+        warning: "bg-feedback-background-warning",
+        information: "bg-feedback-background-information",
+        loading: "bg-feedback-background-loading",
       },
     },
     defaultVariants: {
-      variant: "default",
+      variant: "success",
     },
   }
-)
+);
+
+const alertSideVariants = cva("w-2 shrink-0", {
+  variants: {
+    variant: {
+      success: "bg-feedback-success",
+      error: "bg-feedback-error",
+      warning: "bg-feedback-warning",
+      information: "bg-feedback-information",
+      loading: "bg-feedback-loading",
+    },
+  },
+  defaultVariants: {
+    variant: "success",
+  },
+});
+
+const alertMeta = {
+  success: {
+    title: "Success",
+    icon: CheckIcon,
+    iconBg: "bg-feedback-success",
+  },
+  error: {
+    title: "Error",
+    icon: XIcon,
+    iconBg: "bg-feedback-error",
+  },
+  warning: {
+    title: "Warning",
+    icon: AlertCircleIcon,
+    iconBg: "bg-feedback-warning",
+  },
+  information: {
+    title: "Information",
+    icon: InfoIcon,
+    iconBg: "bg-feedback-information",
+  },
+  loading: {
+    title: "Loading",
+    icon: Loader2Icon,
+    iconBg: "bg-feedback-loading",
+  },
+} as const;
 
 function Alert({
   className,
   variant,
+  children,
   ...props
 }: React.ComponentProps<"div"> & VariantProps<typeof alertVariants>) {
+  const meta = alertMeta[variant ?? "success"];
+  const title = meta.title;
+  const Icon = meta.icon;
+
   return (
     <div
       data-slot="alert"
       role="alert"
-      className={cn(alertVariants({ variant }), className)}
+      className="flex rounded-lg relative overflow-hidden"
       {...props}
-    />
-  )
+    >
+      <div className={cn(alertSideVariants({ variant }), className)} />
+      <div className={cn(alertVariants({ variant }), className)}>
+        <div
+          className={cn(
+            alertSideVariants({ variant }),
+            "flex items-center justify-center rounded-full size-9 md:size-15"
+          )}
+        >
+          <Icon
+            className={cn(
+              "size-5 md:size-9 text-font-light",
+              variant === "loading" && "animate-spin"
+            )}
+          />
+        </div>
+        <div className="space-y-1 text-black">
+          <h1 className="text-s8 md:text-s6">{title}</h1>
+          <p className="text-p8 md:text-p7">{children}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="alert-title"
-      className={cn(
-        "col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight",
-        className
-      )}
-      {...props}
-    />
-  )
-}
-
-function AlertDescription({
-  className,
-  ...props
-}: React.ComponentProps<"div">) {
-  return (
-    <div
-      data-slot="alert-description"
-      className={cn(
-        "text-muted-foreground col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed",
-        className
-      )}
-      {...props}
-    />
-  )
-}
-
-export { Alert, AlertTitle, AlertDescription }
+export { Alert };
