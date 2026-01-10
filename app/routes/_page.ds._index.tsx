@@ -1,7 +1,26 @@
+import { useState } from "react";
+import { Button } from "~/components/ui/button";
+import { Alert } from "~/components/ui/alert";
+import { Checkbox } from "~/components/ui/checkbox";
+import { Chip } from "~/components/ui/chip";
+import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
+import { Switch } from "~/components/ui/switch";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from "~/components/ui/tooltip";
+import { StarIcon, HeartIcon, BellIcon, Star } from "lucide-react";
+import { toast } from "sonner";
+
 export default function DesignSystemPage() {
+  const [checked, setChecked] = useState(false);
+  const [switchValue, setSwitchValue] = useState(false);
+  const [radioValue, setRadioValue] = useState("option1");
+
   return (
     <main className="min-h-screen p-8 bg-linear-0">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl gap-8">
         <h1 className="mb-8 text-4xl font-bold text-gray-900">
           Design System Guidelines
         </h1>
@@ -356,7 +375,7 @@ export default function DesignSystemPage() {
         </section>
 
         {/* Colors Section */}
-        <section>
+        <section className="mb-16">
           <h2 className="mb-6 text-3xl font-bold text-gray-800">
             Color Palettes
           </h2>
@@ -785,6 +804,289 @@ export default function DesignSystemPage() {
                     <p className="text-xs text-gray-600">tertiary-disabled</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Atomic Components Section */}
+        <section className="mb-16">
+          <h2 className="mb-6 text-3xl font-bold text-gray-800">
+            Atomic Components
+          </h2>
+
+          {/* Buttons */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Buttons
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="space-y-6">
+                <div>
+                  <p className="mb-3 text-sm font-medium text-gray-500">
+                    Primary
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Button variant="primary">Button</Button>
+                    <Button variant="primary">
+                      <Star />
+                      Button
+                      <Star />
+                    </Button>
+                    <Button variant="primary" disabled>
+                      Disabled
+                    </Button>
+                  </div>
+                </div>
+                <div>
+                  <p className="mb-3 text-sm font-medium text-gray-500">
+                    Secondary
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Button variant="secondary">Button</Button>
+                    <Button variant="secondary">
+                      <Star />
+                      Button
+                      <Star />
+                    </Button>
+                    <Button variant="secondary" disabled>
+                      Disabled
+                    </Button>
+                  </div>
+                </div>
+                <div>
+                  <p className="mb-3 text-sm font-medium text-gray-500">
+                    Tertiary
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Button variant="tertiary">Button</Button>
+                    <Button variant="tertiary">
+                      <Star />
+                      Button
+                      <Star />
+                    </Button>
+                    <Button variant="tertiary" disabled>
+                      Disabled
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Alerts */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Alerts
+            </h3>
+            <div className="space-y-4">
+              <Alert variant="success">This is a success alert message</Alert>
+              <Alert variant="error">This is an error alert message</Alert>
+              <Alert variant="warning">This is a warning alert message</Alert>
+              <Alert variant="information">
+                This is an information alert message
+              </Alert>
+              <Alert variant="loading">This is a loading alert message</Alert>
+            </div>
+          </div>
+
+          {/* Checkboxes */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Checkboxes
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="flex flex-wrap items-center gap-8">
+                <div className="flex items-center gap-2">
+                  <Checkbox
+                    id="check1"
+                    checked={checked}
+                    onCheckedChange={(value) => setChecked(value === true)}
+                  />
+                  <label htmlFor="check1" className="text-sm cursor-pointer">
+                    Checkbox
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Checkbox id="check2" checked />
+                  <label htmlFor="check2" className="text-sm cursor-pointer">
+                    Checked
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Checkbox id="check3" disabled />
+                  <label
+                    htmlFor="check3"
+                    className="text-sm cursor-not-allowed opacity-50"
+                  >
+                    Disabled
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Checkbox id="check4" checked disabled />
+                  <label
+                    htmlFor="check4"
+                    className="text-sm cursor-not-allowed opacity-50"
+                  >
+                    Checked Disabled
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Chips */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">Chips</h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="flex flex-wrap gap-4">
+                <Chip variant="primary">Primary Chip</Chip>
+                <Chip variant="secondary">Secondary Chip</Chip>
+                <Chip variant="tertiary">Tertiary Chip</Chip>
+                <Chip variant="primary">
+                  <StarIcon />
+                  With Icon
+                </Chip>
+              </div>
+            </div>
+          </div>
+
+          {/* Radio Groups */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Radio Groups
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <RadioGroup value={radioValue} onValueChange={setRadioValue}>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="option1" id="r1" />
+                  <label htmlFor="r1" className="text-sm cursor-pointer">
+                    Option 1
+                  </label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="option2" id="r2" />
+                  <label htmlFor="r2" className="text-sm cursor-pointer">
+                    Option 2
+                  </label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="option3" id="r3" disabled />
+                  <label
+                    htmlFor="r3"
+                    className="text-sm cursor-not-allowed opacity-50"
+                  >
+                    Option 3 (Disabled)
+                  </label>
+                </div>
+              </RadioGroup>
+            </div>
+          </div>
+
+          {/* Switches */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Switches
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="flex flex-wrap items-center gap-8">
+                <div className="flex items-center gap-2">
+                  <Switch
+                    id="switch1"
+                    checked={switchValue}
+                    onCheckedChange={setSwitchValue}
+                  />
+                  <label htmlFor="switch1" className="text-sm cursor-pointer">
+                    Switch
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Switch id="switch2" checked />
+                  <label htmlFor="switch2" className="text-sm cursor-pointer">
+                    Checked
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Switch id="switch3" disabled />
+                  <label
+                    htmlFor="switch3"
+                    className="text-sm cursor-not-allowed opacity-50"
+                  >
+                    Disabled
+                  </label>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Switch id="switch4" checked disabled />
+                  <label
+                    htmlFor="switch4"
+                    className="text-sm cursor-not-allowed opacity-50"
+                  >
+                    Checked Disabled
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tooltips */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Tooltips
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="flex flex-wrap gap-4">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Button variant="primary">Hover</Button>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>This is a tooltip</p>
+                  </TooltipContent>
+                </Tooltip>
+              </div>
+            </div>
+          </div>
+
+          {/* Toaster */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Toaster (Toast Notifications)
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <p className="mb-4 text-sm text-gray-600">
+                Click buttons to trigger toast notifications
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  variant="primary"
+                  onClick={() => toast.success("Success toast")}
+                >
+                  Success
+                </Button>
+                <Button
+                  variant="primary"
+                  onClick={() => toast.error("Error toast")}
+                >
+                  Error
+                </Button>
+                <Button
+                  variant="primary"
+                  onClick={() => toast.warning("Warning toast")}
+                >
+                  Warning
+                </Button>
+                <Button
+                  variant="primary"
+                  onClick={() => toast.info("Information toast")}
+                >
+                  Information
+                </Button>
+                <Button
+                  variant="primary"
+                  onClick={() => toast.loading("Loading toast")}
+                >
+                  Loading
+                </Button>
               </div>
             </div>
           </div>
