@@ -7,6 +7,7 @@ import { Home, Star } from "lucide-react";
 import { Button } from "~/components/ui/button";
 import { Chip } from "~/components/ui/chip";
 import { Alert } from "~/components/ui/alert";
+import { toast } from "sonner";
 
 export function LandingPageModule() {
   return (
@@ -87,6 +88,26 @@ export function LandingPageModule() {
             A simple information alert-check it out!
           </Alert>
           <Alert variant="loading">A simple loading alert-check it out!</Alert>
+        </div>
+      </div>
+      <div>
+        Toaster
+        <div className="flex flex-col">
+          <Button onClick={() => toast.success("Event has been created")}>
+            Show Toast
+          </Button>
+          <Button onClick={() => toast.error("Event has been created")}>
+            Show Toast
+          </Button>
+          <Button onClick={() => toast.warning("Event has been created")}>
+            Show Toast
+          </Button>
+          <Button onClick={() => toast.info("Event has been created")}>
+            Show Toast
+          </Button>
+          <Button onClick={() => toast.loading("Event has been created")}>
+            Show Toast
+          </Button>
         </div>
       </div>
     </main>
