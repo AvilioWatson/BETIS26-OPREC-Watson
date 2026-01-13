@@ -10,9 +10,11 @@ import {
 import { Textarea } from "~/components/ui/textarea";
 import { FileUpload } from "~/components/ui/file-upload";
 import { useState } from "react";
+import { Calendar } from "~/components/ui/calendar";
 
 export function LandingPageModule() {
   const [files, setFiles] = useState<File | null>(null);
+  const [date, setDate] = useState<Date | undefined>(new Date());
 
   return (
     <main className="bg-main-theme flex items-center justify-center min-h-screen text-olivine-darker p-8">
@@ -50,6 +52,14 @@ export function LandingPageModule() {
             accept=".pdf,.doc,.docx,.jpg,.png"
           />
         </div>
+
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          className="rounded-md border shadow-sm"
+          captionLayout="dropdown"
+        />
       </div>
     </main>
   );
