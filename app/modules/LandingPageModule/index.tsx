@@ -21,16 +21,6 @@ export function LandingPageModule() {
             <SelectItem value="blueberry">Blueberry</SelectItem>
             <SelectItem value="grapes">Grapes</SelectItem>
             <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
           </SelectGroup>
         </SelectContent>
       </Select>
