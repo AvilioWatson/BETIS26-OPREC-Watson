@@ -1,3 +1,5 @@
+import { Input } from "~/components/ui/input";
+import { Label } from "~/components/ui/label";
 import {
   Select,
   SelectContent,
@@ -9,21 +11,11 @@ import {
 
 export function LandingPageModule() {
   return (
-    <main className="flex items-center justify-center h-screen text-olivine-darker">
-      <Select>
-        <SelectTrigger className="">
-          <SelectValue placeholder="Select a fruit" />
-        </SelectTrigger>
-        <SelectContent position="popper">
-          <SelectGroup>
-            <SelectItem value="apple">Apple</SelectItem>
-            <SelectItem value="banana">Banana</SelectItem>
-            <SelectItem value="blueberry">Blueberry</SelectItem>
-            <SelectItem value="grapes">Grapes</SelectItem>
-            <SelectItem value="pineapple">Pineapple</SelectItem>
-          </SelectGroup>
-        </SelectContent>
-      </Select>
+    <main className="bg-main-theme flex items-center justify-center h-screen text-olivine-darker">
+      <div>
+        <Label>Email</Label>
+        <Input type="email" placeholder="Email" />
+      </div>
     </main>
   );
 }
