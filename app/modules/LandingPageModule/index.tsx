@@ -8,13 +8,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "~/components/ui/select";
+import { Textarea } from "~/components/ui/textarea";
 
 export function LandingPageModule() {
   return (
     <main className="bg-main-theme flex items-center justify-center h-screen text-olivine-darker">
       <div>
         <Label>Email</Label>
-        <Input type="email" placeholder="Email" />
+        <Textarea placeholder="Textarea" />
       </div>
     </main>
   );
