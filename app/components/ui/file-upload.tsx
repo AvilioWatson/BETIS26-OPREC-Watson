@@ -134,7 +134,7 @@ function FileUpload({
         onDrop={handleDrop}
         onClick={handleClick}
         className={cn(
-          "relative flex flex-col h-60 w-73 md:w-95.5 items-center justify-center gap-4 rounded-xl border-2 bg-background-light p-12 md:p-16 transition-all shadow-xs",
+          "relative flex flex-col h-60 w-full items-center justify-center gap-4 rounded-xl border-2 bg-background-light p-12 md:p-16 transition-all shadow-xs",
           isDragging && !disabled && !file
             ? "border-stroke-medium bg-background-olivine-light cursor-pointer"
             : "border-stroke-medium-light",

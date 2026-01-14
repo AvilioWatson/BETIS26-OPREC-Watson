@@ -199,7 +199,7 @@
     var(--olivine-light-active),
     transparent 80%
   );
-  --background-dark: var(--moonstone-dark-hover);
+  --background-dark: var(--payneys-grey-normal-active);
 
   --stroke-light: var(--caput-mortuum-light-hover);
   --stroke-medium-light: var(--payneys-grey-light-active);
