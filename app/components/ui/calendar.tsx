@@ -18,7 +18,7 @@ function Calendar({
   classNames,
   showOutsideDays = true,
   captionLayout = "label",
-  buttonVariant = "primary",
+  buttonVariant = "none",
   formatters,
   components,
   ...props
@@ -192,9 +192,8 @@ function CalendarDayButton({
   const ref = React.useRef<HTMLButtonElement>(null);
 
   return (
-    <Button
+    <button
       ref={ref}
-      variant="primary"
       data-day={day.date.toLocaleDateString()}
       data-selected={modifiers.selected}
       className={cn(
