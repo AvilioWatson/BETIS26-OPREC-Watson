@@ -12,7 +12,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-9999 fixed inset-0">
+    <nav className="z-999 max-w-480 mx-auto fixed inset-0">
       <div className="px-5 lg:px-12 h-12 lg:h-25 flex items-center justify-between gap-7 bg-tertiary-normal">
         <div className="flex items-center gap-3 text-h6 lg:text-h3 font-xilosa text-font-light">
           <img src="/logo-white.webp" alt="logo" className="h-15 max-lg:h-7" />

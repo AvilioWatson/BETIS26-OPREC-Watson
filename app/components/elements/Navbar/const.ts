@@ -11,7 +11,7 @@ export const NavbarItem = [
   },
 
   {
-    name: "Betis-Talk",
+    name: "BETIS-Talk",
     link: "/betis-talk",
     disabled: true,
   },
