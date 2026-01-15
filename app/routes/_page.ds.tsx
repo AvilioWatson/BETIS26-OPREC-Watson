@@ -40,7 +40,7 @@ import {
   PaginationPrevious,
 } from "~/components/ui/pagination";
 import { FileUpload } from "~/components/ui/file-upload";
-import { StarIcon, HeartIcon, BellIcon, Star, Upload } from "lucide-react";
+import { StarIcon, Star } from "lucide-react";
 import { toast } from "sonner";
 
 export default function DesignSystemPage() {

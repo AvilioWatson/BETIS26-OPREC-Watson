@@ -378,5 +378,5 @@
 
 html,
 body {
-  @apply bg-tertiary-active font-poppins;
+  @apply bg-background-light font-poppins;
 }
