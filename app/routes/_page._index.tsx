@@ -11,6 +11,6 @@ export async function action(args: ActionFunctionArgs) {
   return LandingPageAction(args);
 }
 
-export default function LandingPagePage() {
+export default function Home() {
   return <LandingPageModule />;
 }

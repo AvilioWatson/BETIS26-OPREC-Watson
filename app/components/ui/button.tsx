@@ -15,6 +15,7 @@ const buttonVariants = cva(
           "bg-secondary-normal hover:bg-secondary-hover active:bg-secondary-active text-stroke-light disabled:bg-secondary-disabled disabled:text-stroke-light/50",
         tertiary:
           "border-2 text-tertiary-normal hover:text-tertiary-hover active:text-tertiary-active disabled:border-caput-mortuum-light disabled:text-caput-mortuum-light",
+        none: "",
       },
     },
     defaultVariants: {

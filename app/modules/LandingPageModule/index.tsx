@@ -1,20 +1,16 @@
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "~/components/ui/tooltip";
-import { Home, Star } from "lucide-react";
-import { Button } from "~/components/ui/button";
-import { Chip } from "~/components/ui/chip";
-import { Alert } from "~/components/ui/alert";
-import { Switch } from "~/components/ui/switch";
-import { Checkbox } from "~/components/ui/checkbox";
-import { RadioGroup, RadioGroupItem } from "~/components/ui/radio-group";
-import { toast } from "sonner";
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "~/components/ui/pagination";
 
 export function LandingPageModule() {
   return (
-    <main className="flex items-center justify-center h-screen text-olivine-darker">
+    <main className="bg-main-theme flex items-center justify-center min-h-screen text-olivine-darker p-8">
       Landing Page
     </main>
   );

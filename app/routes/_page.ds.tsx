@@ -10,13 +10,45 @@ import {
   TooltipTrigger,
   TooltipContent,
 } from "~/components/ui/tooltip";
-import { StarIcon, HeartIcon, BellIcon, Star } from "lucide-react";
+import { Input } from "~/components/ui/input";
+import { Textarea } from "~/components/ui/textarea";
+import { Label } from "~/components/ui/label";
+import { Select } from "~/components/ui/select";
+import { Calendar } from "~/components/ui/calendar";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "~/components/ui/dialog";
+import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "~/components/ui/accordion";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "~/components/ui/pagination";
+import { FileUpload } from "~/components/ui/file-upload";
+import { StarIcon, HeartIcon, BellIcon, Star, Upload } from "lucide-react";
 import { toast } from "sonner";
 
 export default function DesignSystemPage() {
   const [checked, setChecked] = useState(false);
   const [switchValue, setSwitchValue] = useState(false);
   const [radioValue, setRadioValue] = useState("option1");
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  const [files, setFiles] = useState<File | null>(null);
 
   return (
     <main className="min-h-screen p-8 bg-linear-0">
@@ -1088,6 +1120,274 @@ export default function DesignSystemPage() {
                   Loading
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Molecular Components Section */}
+        <section className="mb-16">
+          <h2 className="mb-6 text-3xl font-bold text-gray-800">
+            Molecular Components
+          </h2>
+
+          {/* Input Fields */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Input Fields
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="space-y-6 max-w-md">
+                <div className="space-y-2">
+                  <Label htmlFor="input-default">Default Input</Label>
+                  <Input id="input-default" placeholder="Enter text..." />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="input-disabled">Disabled Input</Label>
+                  <Input id="input-disabled" placeholder="Disabled" disabled />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="input-error">Input with Error</Label>
+                  <Input
+                    id="input-error"
+                    placeholder="Error state"
+                    className="border-feedback-error"
+                  />
+                  <p className="text-sm text-feedback-error">
+                    This field is required
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Textarea */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Textarea
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="space-y-6 max-w-md">
+                <div className="space-y-2">
+                  <Label htmlFor="textarea-default">Default Textarea</Label>
+                  <Textarea
+                    id="textarea-default"
+                    placeholder="Enter your message..."
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="textarea-disabled">Disabled Textarea</Label>
+                  <Textarea
+                    id="textarea-disabled"
+                    placeholder="Disabled"
+                    disabled
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Select */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Select Dropdown
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="space-y-6 max-w-md">
+                <div className="space-y-2">
+                  <Label htmlFor="select-default">Select an option</Label>
+                  <Select>
+                    <option value="">Choose...</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                  </Select>
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="select-disabled">Disabled Select</Label>
+                  <Select disabled>
+                    <option value="">Choose...</option>
+                    <option value="option1">Option 1</option>
+                  </Select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Calendar */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Calendar
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <Calendar
+                mode="single"
+                selected={date}
+                onSelect={setDate}
+                className="rounded-md border"
+              />
+            </div>
+          </div>
+
+          {/* File Upload */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              File Upload
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <div className="space-y-6 max-w-md">
+                <div className="space-y-2">
+                  <Label>Upload Files</Label>
+                  <FileUpload value={files} onChange={setFiles} />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Card */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">Card</h3>
+            <div className="space-y-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle>Card Title</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-gray-600">
+                    This is a card component with header and content sections.
+                    It can be used to group related information.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Tabs */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">Tabs</h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <Tabs defaultValue="tab1" className="w-full">
+                <TabsList>
+                  <TabsTrigger value="tab1">Tab 1</TabsTrigger>
+                  <TabsTrigger value="tab2">Tab 2</TabsTrigger>
+                  <TabsTrigger value="tab3">Tab 3</TabsTrigger>
+                </TabsList>
+                <TabsContent value="tab1" className="mt-4">
+                  <p className="text-sm text-gray-600">
+                    Content for Tab 1. This is where you can display content
+                    specific to this tab.
+                  </p>
+                </TabsContent>
+                <TabsContent value="tab2" className="mt-4">
+                  <p className="text-sm text-gray-600">
+                    Content for Tab 2. Each tab can have different content.
+                  </p>
+                </TabsContent>
+                <TabsContent value="tab3" className="mt-4">
+                  <p className="text-sm text-gray-600">
+                    Content for Tab 3. Tabs help organize information in a
+                    compact space.
+                  </p>
+                </TabsContent>
+              </Tabs>
+            </div>
+          </div>
+
+          {/* Accordion */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Accordion
+            </h3>
+            <div className="space-y-4">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Accordion Item 1</AccordionTrigger>
+                  <AccordionContent>
+                    This is the content for the first accordion item. Click the
+                    trigger to expand or collapse this section.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Accordion Item 2</AccordionTrigger>
+                  <AccordionContent>
+                    This is the content for the second accordion item.
+                    Accordions are great for FAQs and collapsible sections.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Accordion Item 3</AccordionTrigger>
+                  <AccordionContent>
+                    This is the content for the third accordion item. You can
+                    add any content here including text, images, or other
+                    components.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+
+          {/* Pagination */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Pagination
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious href="#" />
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#" isActive>
+                      1
+                    </PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">2</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">3</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationEllipsis />
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationLink href="#">100</PaginationLink>
+                  </PaginationItem>
+                  <PaginationItem>
+                    <PaginationNext href="#" />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          </div>
+
+          {/* Dialog */}
+          <div className="mb-8">
+            <h3 className="mb-4 text-2xl font-semibold text-gray-700">
+              Dialog (Modal)
+            </h3>
+            <div className="rounded-lg border border-gray-200 bg-white p-6">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="primary">Open Dialog</Button>
+                </DialogTrigger>
+                <DialogContent>
+                  <DialogHeader>
+                    <DialogTitle>Dialog Title</DialogTitle>
+                  </DialogHeader>
+                  <div className="py-4">
+                    <p className="text-sm text-gray-600">
+                      This is a dialog component. It can be used for modals,
+                      alerts, or any content that needs to overlay the main
+                      page.
+                    </p>
+                  </div>
+                  <div className="flex justify-end gap-3">
+                    <Button variant="tertiary">Cancel</Button>
+                    <Button variant="primary">Confirm</Button>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </section>
